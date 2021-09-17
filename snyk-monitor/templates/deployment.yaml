@@ -128,9 +128,11 @@ spec:
           {{- end }}
           resources:
             requests:
+              ephemeral-storage: "50Gi"
               cpu: {{ .Values.requests.cpu }}
               memory: {{ .Values.requests.memory }}
             limits:
+              ephemeral-storage: "50Gi"
               cpu: {{ .Values.limits.cpu }}
               memory: {{ .Values.limits.memory }}
           livenessProbe:
